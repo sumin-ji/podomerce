@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const List = styled.div`
@@ -55,24 +55,32 @@ const Count = styled.div`
 `
 
 
-const func = async () => {
-    try {
-        const data = await fetch('http://podomerce-api.loca.lt/chart').then(res => res.json());
-        return data;
-    } catch (e) {
-        console.error(e);
-    }
-}
+// const func = async () => {
+//     try {
+//         const data = await fetch('http://podomerce-api.loca.lt/chart').then(res => res.json());
+//         return data;
+//     } catch (e) {
+//         console.error(e);
+//     }
+// }
+
+
+const datas = [
+    {userId:'1',name:'지수민',rank:'1',cnt:'8',image:'https://ca.slack-edge.com/TG9C7MDEY-U05EA92TT7B-bcbeb1dcf4e3-512'},
+    {userId:'2',name:'유근수',rank:'2',cnt:'5',image:'https://ca.slack-edge.com/TG9C7MDEY-U03CH34TSGY-d6b6a6ad33eb-512'},
+    {userId:'3',name:'오상아',rank:'3',cnt:'4',image:'https://ca.slack-edge.com/TG9C7MDEY-U03LCF1BG4D-6bc981c39711-512'},
+    {userId:'4',name:'이하연',rank:'4',cnt:'2',image:'https://ca.slack-edge.com/TG9C7MDEY-U03REDET5FF-524fe8f533fc-512'},
+]
 
 const Chart = () => {
 
-    const [datas, setDatas] = useState([{ userId: 'sdfadsf', name: 'sumin', rank: '1', cnt: '1', image: '1' }])
-    useEffect(() => {
-        func().then(data => {
-            console.log(data);
-            setDatas(data);
-        })
-    }, [])
+    // const [datas, setDatas] = useState([{ userId: 'sdfadsf', name: 'sumin', rank: '1', cnt: '1', image: '1' }])
+    // useEffect(() => {
+    //     func().then(data => {
+    //         console.log(data);
+    //         setDatas(data);
+    //     })
+    // }, [])
 
     return (
         <List>
